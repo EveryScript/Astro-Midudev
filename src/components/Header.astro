@@ -1,0 +1,38 @@
+---
+// Font Awesome search: https://fontawesome.com/v5/search
+import HeaderButton from "./HeaderButton.astro";
+---
+
+<header class="px-3 py-5 mx-auto text-white">
+    <div class="mb-3 text-center">
+        <span class="text-[5rem]">🚀</span>
+        <h2 class="font-bold text-5xl mb-3 text-white">
+            Astro Example
+        </h2>
+        <p>
+            Este es un ejemplo de sitio web estático desarrollado en Astro con
+            una consulta a una API
+        </p>
+    </div>
+    <nav class="flex flex-col md:flex-row justify-center gap-4">
+        <HeaderButton routeLink="/">
+            <i slot="before" class="fas fa-home text-xl mr-1"></i>
+            Home
+        </HeaderButton>
+        <HeaderButton routeLink="/space-launches">
+            <i slot="before" class="far fa-question-circle text-xl mr-1"></i>
+            SpaceLaunches
+        </HeaderButton>
+        <HeaderButton routeLink="/about">
+            <i slot="before" class="far fa-question-circle text-xl mr-1"></i>
+            About
+        </HeaderButton>
+        <HeaderButton routeLink="/mi-contenido">
+            <i slot="before" class="fas fa-file-alt text-xl mr-1"></i>
+            Marcdown file
+        </HeaderButton>
+        <HeaderButton routeLink="/">
+            <i slot="before" class="fas fa-mouse-pointer text-xl mr-1"></i>
+        </HeaderButton>
+    </nav>
+</header>

@@ -1,0 +1,56 @@
+---
+import defaultRocketImage from "../assets/img/default-rocket.png";
+// Waiting props
+interface Props {
+    id: string;
+    img: string;
+    success: boolean;
+    flightNumber: number;
+    details: string | null;
+}
+// Getting props
+const { success, flightNumber, id, img, details } = Astro.props;
+const successText = success ? "Success" : "Failure";
+---
+
+<a href={`/launch/${id}`}>
+    <article
+        class="flex flex-col justify-start h-full text-center bg-gray-900 py-8 px-6 rounded-lg"
+    >
+        <picture class="mb-4">
+            <img
+                class="mx-auto w-32"
+                src={img ? img : "../assets/img/default-rocket.png"}
+                alt="rocket-picture"
+            />
+            <img
+                class="mx-auto w-32"
+                src={defaultRocketImage.src}
+                alt="default-rocket"
+                hidden
+            />
+        </picture>
+        <h5 class="title-red mb-1">Flight No. {flightNumber}</h5>
+        <div class="mb-2">
+            <span
+                class:list={[
+                    "px-2 py-1 rounded-lg text-sm font-light",
+                    {
+                        "bg-green-900": success,
+                        "bg-red-900": !success,
+                    },
+                ]}
+            >
+                {
+                    success ? (
+                        <i class="fas fa-check-circle" />
+                    ) : (
+                        <i class="fas fa-exclamation-circle" />
+                    )
+                }
+                {successText}
+            </span>
+        </div>
+        <p class="text-sm">{details}</p>
+    </article>
+</a>

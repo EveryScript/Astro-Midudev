@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Astro Example">
+	<section>
+		<h4 class="title-red">Introducción</h4>
+		<p class="mb-4">
+			Las páginas web hechas con Astro ofrecen una mayor velocidad de
+			renderizado con las propiedades conocidas de React y otros
+			frameworks pero tendiendo una mayor ventaja en cuanto a peso y
+			velocidad de carga.
+		</p>
+		<h4 class="title-red">Elementos importantes</h4>
+		<div class="mb-4">
+			<p class="mb-4">
+				Astro trabaja tanto para frontend como para backend pero trabaja
+				con los siguientes elementos
+			</p>
+			<ul class="ml-10">
+				<li class="mb-4">
+					<div class="font-bold text-lg">El layout</div>
+					<p class="text-white font-normal">
+						El layout controla basicamente los estilos y parametros
+						globales del sitio de Astro para establecer los valores
+						que funcionan por defecto y las condiciones principales
+						del sitio para desplegarse.
+					</p>
+				</li>
+				<li class="mb-4">
+					<div class="font-bold text-lg">Las páginas</div>
+					<p class="text-white font-normal">
+						Astro puede crear un routing automatico al agregar las
+						paginas que uno quiera en la carpeta de pages. Cualquier
+						archivo creado con la extensión .astro que contenga una
+						declaracion del Layout en ella se convierte en una
+						página.
+					</p>
+				</li>
+				<li class="mb-4">
+					<div class="font-bold text-lg">Los componentes</div>
+					<p class="text-white font-normal">
+						Los componentes funcionan igual que en React, por que se
+						pueden importar desde cualquier página para ser
+						reutilizados y actuar como uno desea, además se pueden
+						definir los parametros como props en el mismo componente
+						para hacerlo más dinámico.
+					</p>
+				</li>
+			</ul>
+		</div>
+		<h4 class="title-red">JavaScript incluido</h4>
+		<p class="mb-4">
+			Cada componente y pagina puede cargar codigo de JavaScript
+			tranquilamente en el inicio del sitio, pero lo interesante es que al
+			final de la construccion del sitio el uso de JavaScript desde el
+			navegador es mínimo.
+		</p>
+		<h4 class="title-red">
+			Más información en camino
+		</h4>
+		<p class="mb-4">
+			Si hay más información que se sabe o se descubre durante el
+			aprendizaje de Astro se anotará en componentes o en páginas
+		</p>
+	</section>
+</Layout>
